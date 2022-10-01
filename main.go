@@ -34,7 +34,7 @@ func main() {
 	// Print local IP's
 	bold.Print("\nListening on:\n")
 	iplist.LocalIP()
-	bold.Print("\nPort:")
+	bold.Print("Port:")
 	fmt.Print(" " + (strconv.Itoa(*port)))
 
 	// print list of files
