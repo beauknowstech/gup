@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"gup/internal/filelist"
+	"gup/internal/iplist"
 	"net/http"
 	"strconv"
 
@@ -28,8 +29,11 @@ func main() {
 	bold := color.New(color.Bold, color.Underline)
 	//print info
 	//bold.Printf("Directory: %s\nPort: %d\n", *webroot, *port)
-	bold.Print("Directory:")
+	bold.Print("Local Directory:")
 	fmt.Print(" " + *webroot)
+	// Print local IP's
+	bold.Print("\nListening on:\n")
+	iplist.LocalIP()
 	bold.Print("\nPort:")
 	fmt.Print(" " + (strconv.Itoa(*port)))
 

@@ -15,7 +15,7 @@ func ListFilesrecursive(dirname string) {
 			if err != nil {
 				return err
 			}
-			fmt.Println(path)
+			fmt.Print(path + " ")
 			return nil
 		})
 	if err != nil {
@@ -31,6 +31,6 @@ func ListFiles(dirname string) {
 	}
 
 	for _, file := range files {
-		fmt.Println(file.Name())
+		fmt.Print(file.Name() + " ")
 	}
 }
