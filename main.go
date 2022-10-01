@@ -5,15 +5,21 @@ import (
 	"fmt"
 	"gup/internal/filelist"
 	"gup/internal/iplist"
+	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	"github.com/fatih/color"
 )
 
 func main() {
+	pwd, err := os.Getwd()
+	if err != nil {
+		log.Println(err)
+	}
 
-	webroot := flag.String("d", ".", "Specify which directory")
+	webroot := flag.String("d", pwd, "Specify which directory")
 	port := flag.Int("p", 80, "Specify which port to listen on")
 	recursive := flag.Bool("r", false, "Recursive or nah?")
 	flag.Parse()
