@@ -26,7 +26,6 @@ func main() {
 
 	// create file server handler
 	fs := http.FileServer(http.Dir(*webroot))
-	//path, err := os.Getwd()
 	//if err != nil {
 	//	fmt.Println(err)
 	//}
@@ -34,7 +33,6 @@ func main() {
 
 	bold := color.New(color.Bold, color.Underline)
 	//print info
-	//bold.Printf("Directory: %s\nPort: %d\n", *webroot, *port)
 	bold.Print("Local Directory:")
 	fmt.Print(" " + *webroot)
 	// Print local IP's

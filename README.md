@@ -9,11 +9,11 @@ gup (go-up) is meant to be a go replacement for `python3 -m http.server` with fe
 
 ## Flags
 
--p to change the port. Default 80.
+-p to change the port. Default is 80.
 
 -d to change the directory. Default is pwd.
 
--r show files recursively in addition to just the files in pwd. Default false. 
+-r show files recursively in addition to just the files in pwd. Default is false. 
 
 ## Examples
 
@@ -43,3 +43,9 @@ https://github.com/MuirlandOracle/up-http-tool
 https://github.com/patrickhener/goshs
 
 
+## Disclaimer
+
+I'm not a developer bro. This is my first time using go so feel free to make suggestions. 
+
+### To-Do
+Does anyone know how to make a logger for something like this?
