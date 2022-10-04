@@ -48,4 +48,4 @@ https://github.com/patrickhener/goshs
 I'm not a developer bro. This is my first time using go so feel free to make suggestions. 
 
 ### To-Do
-Does anyone know how to make a logger for something like this?
+~~Does anyone know how to make a logger for something like this?~~

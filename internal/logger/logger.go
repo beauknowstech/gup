@@ -8,7 +8,7 @@ import (
 )
 
 // https://go.dev/play/p/6E6grsIts9
-//https://stackoverflow.com/questions/34017342/log-404-on-http-fileserver
+// https://stackoverflow.com/questions/34017342/log-404-on-http-fileserver
 
 type StatusRespWr struct {
 	http.ResponseWriter // We embed http.ResponseWriter

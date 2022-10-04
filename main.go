@@ -28,7 +28,6 @@ func main() {
 	strport := ":" + (strconv.Itoa(*port))
 
 	// create file server handler
-	//fs := http.FileServer(http.Dir(*webroot))
 	fs := logger.LoggingHandler(http.FileServer(http.Dir(*webroot)))
 
 	bold := color.New(color.Bold, color.Underline)
