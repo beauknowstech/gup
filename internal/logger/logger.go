@@ -3,6 +3,7 @@ package logger
 import (
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/fatih/color"
 )
@@ -25,11 +26,11 @@ func LoggingHandler(h http.Handler) http.Handler {
 		srw := &StatusRespWr{ResponseWriter: w}
 		h.ServeHTTP(srw, r)
 		if (srw.status >= 400) && (srw.status <= 599) {
-			fmt.Print("\n"+r.Method+" ", r.URL.Path+" ")
+			fmt.Print("\n"+strings.Split(r.RemoteAddr, ":")[0]+" ", r.Method+" ", r.URL.Path+" ")
 			rederror := color.New(color.Bold, color.FgRed)
 			rederror.Print(srw.status)
 		} else {
-			fmt.Print("\n"+r.Method+" ", r.URL.Path+" ")
+			fmt.Print("\n"+strings.Split(r.RemoteAddr, ":")[0]+" ", r.Method+" ", r.URL.Path+" ")
 			info := color.New(color.Bold, color.FgGreen)
 			info.Print(srw.status)
 		}
