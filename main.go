@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"gup/internal/filelist"
 	"gup/internal/iplist"
+	"gup/internal/logger"
 	"log"
 	"net/http"
 	"os"
@@ -24,12 +25,11 @@ func main() {
 	recursive := flag.Bool("r", false, "Recursive or nah?")
 	flag.Parse()
 
-	// create file server handler
-	fs := http.FileServer(http.Dir(*webroot))
-	//if err != nil {
-	//	fmt.Println(err)
-	//}
 	strport := ":" + (strconv.Itoa(*port))
+
+	// create file server handler
+	//fs := http.FileServer(http.Dir(*webroot))
+	fs := logger.LoggingHandler(http.FileServer(http.Dir(*webroot)))
 
 	bold := color.New(color.Bold, color.Underline)
 	//print info
