@@ -7,6 +7,9 @@ gup (go-up) is meant to be a go replacement for `python3 -m http.server` with fe
 * Shows what local directory gup is listening from
 * Shows the file names of the files in the directory
 
+## Output:
+![gup](images/gup.png?raw=true "output")
+
 ## Flags
 
 -p to change the port. Default is 80.
@@ -45,7 +48,7 @@ https://github.com/patrickhener/goshs
 
 ## Disclaimer
 
-I'm not a developer bro. This is my first time using go so feel free to make suggestions. 
+I'm not a developer. I only tested this on Kali 2022.2. If you want to make changes then go for it. 
 
 ### To-Do
 ~~Does anyone know how to make a logger for something like this?~~
