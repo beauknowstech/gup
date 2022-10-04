@@ -10,6 +10,10 @@ gup (go-up) is meant to be a go replacement for `python3 -m http.server` with fe
 ## Output:
 ![gup](images/gup.png?raw=true "output")
 
+
+## Install
+Either compile yourself with `go build main.go` or download the gup binary from the releases page and put it somewhere in your `echo $PATH`. Mine is in /usr/bin/
+
 ## Flags
 
 -p to change the port. Default is 80.
