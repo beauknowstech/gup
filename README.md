@@ -16,7 +16,10 @@ gup (go-up) is meant to be a go replacement for `python3 -m http.server` with fe
 ![gup](images/gup.png?raw=true "output")
 
 ## Install
-Either compile yourself with `go build main.go` or download the gup binary from the releases page and put it somewhere in your `echo $PATH`. Mine is in /usr/bin/
+
+* Run `go install github.com/beauknowstech/gup@latest` (ensuring `$GOPATH` is in your `$PATH`)
+* Or download the gup binary from the releases page and put it somewhere in your `echo $PATH`. Mine is in /usr/bin/
+* Or compile yourself with `go build main.go` after cloning the repo
 
 ## Flags
 
