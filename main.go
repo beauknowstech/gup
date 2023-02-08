@@ -3,14 +3,14 @@ package main
 import (
 	"flag"
 	"fmt"
-	"gup/internal/filelist"
-	"gup/internal/iplist"
-	"gup/internal/logger"
 	"log"
 	"net/http"
 	"os"
 	"strconv"
 
+	"github.com/beauknowstech/gup/internal/filelist"
+	"github.com/beauknowstech/gup/internal/iplist"
+	"github.com/beauknowstech/gup/internal/logger"
 	"github.com/fatih/color"
 )
 

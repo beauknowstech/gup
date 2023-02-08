@@ -1,4 +1,4 @@
-module gup
+module github.com/beauknowstech/gup
 
 go 1.19
 
