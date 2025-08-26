@@ -3,19 +3,27 @@ This is gup the guppy
 
 # gup
 
-gup (go-up) is meant to be a go replacement for `python3 -m http.server` with features that I find useful when practicing on HackTheBox, TryHackMe, OSCP etc. 
+gup (go-up) is meant to be a go replacement for `python3 -m http.server` with additional functionalities.
 
 ## Features
 * Shows what IP(s) and Port its listening on
 * Shows what local directory gup is listening from
 * Shows the file names of the files in the directory
+* File Upload Feature
+```
+#Upload From Windows:
+(New-Object System.Net.WebClient).UploadFile('http://<IP>', '<Full Filepath>')
+
+#Upload From Linux:
+curl -F 'file=@<FILENAME>' http://<IP>/
+```
 
 ## Output:
 ![gup](images/gup.png?raw=true "output")
 
 ## Install
 
-* Run `go install github.com/beauknowstech/gup@latest` (ensuring `$GOPATH` is in your `$PATH`)
+* Run `go install github.com/n000b3r/gup@latest` (ensuring `$GOPATH` is in your `$PATH`)
 * Or download the gup binary from the releases page and put it somewhere in your `echo $PATH`. Mine is in /usr/bin/
 * Or compile yourself with `go build main.go` after cloning the repo
 
@@ -48,16 +56,10 @@ gup (go-up) is meant to be a go replacement for `python3 -m http.server` with fe
   
 ## Credits/Inspiration
 
+https://github.com/beauknowstech/gup
+
 https://github.com/sc0tfree/updog
 
 https://github.com/MuirlandOracle/up-http-tool
 
 https://github.com/patrickhener/goshs
-
-
-## Disclaimer
-
-I'm not a developer. I only tested this on Kali 2022.2. If you want to make changes then go for it. 
-
-### To-Do
-~~Does anyone know how to make a logger for something like this?~~
